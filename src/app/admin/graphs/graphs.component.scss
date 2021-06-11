@@ -1,0 +1,86 @@
+.sidenavcontainer {
+  position: absolute !important;
+}
+
+.side-button {
+  width: 50px;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.side-selected {
+  background-color: #ffe9e9;
+}
+
+.side-icon {
+  font-size: 26px;
+}
+
+.topbar-container {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo-topbar {
+  font-style: normal;
+  font-size: 23px;
+  margin-top: 5px;
+  line-height: 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.boton-back {
+  margin-right: 15px;
+}
+
+.icon-back {
+  font-size: 32px;
+}
+
+.titulo-label {
+  margin-top: 7px;
+}
+
+.perfil-topbar {
+  margin-right: 80px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.perfil-label {
+  margin-right: 10px;
+}
+.perfil-foto {
+  width: 50px;
+  height: 50px;
+}
+.filtros-container {
+  background-color: #f5efef;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: #f5f5f500;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+  background-color: #f5f5f500;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #7a7676;
+}

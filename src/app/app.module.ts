@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthRoutingModule } from './auth/auth.routing.module';
-import { ResultsComponent } from './admin/results/results.component';
+
+//Angular Material
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTableModule} from "@angular/material/table";
 import {MatInputModule} from "@angular/material/input";
@@ -17,7 +18,6 @@ import {MatChipsModule} from "@angular/material/chips";
 @NgModule({
   declarations: [
     AppComponent,
-    ResultsComponent
   ],
     imports: [
         BrowserModule,
@@ -30,7 +30,7 @@ import {MatChipsModule} from "@angular/material/chips";
         MatButtonModule,
         MatIconModule,
         MatDatepickerModule,
-        MatChipsModule
+        MatChipsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

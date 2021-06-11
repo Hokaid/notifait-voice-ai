@@ -1,0 +1,82 @@
+<mat-sidenav-container class="sidenavcontainer inset-0 bg-white">
+    <mat-sidenav mode="side" class="w-16 bg-white text-black" opened>
+        <div class="text-center mt-20">
+            <button mat-icon-button class="side-button side-selected">
+                <mat-icon aria-hidden="false" class="side-icon">campaign</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">file_copy</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">signal_cellular_alt</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">settings</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">laptop</mat-icon>
+            </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="topbar-container">
+            <div class="titulo-topbar">
+                <button mat-icon-button aria-label="back" class="boton-back">
+                    <mat-icon class="icon-back">keyboard_arrow_left</mat-icon>
+                </button>
+                <div style="font-family: Ubuntu;" class="font-bold titulo-label">Gráficos</div>
+            </div>
+            <div class="perfil-topbar">
+                <label class="perfil-label">Hola, Luis</label>
+                <img class="perfil-foto" src="../../../assets/img/perfil.png">
+            </div>
+        </mat-toolbar>
+        <div class="filtros-container">
+            <div class="block">
+                <div style="font-family: Ubuntu;" class="w-5/12 text-xs ml-6">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                    consequat duis enim velit
+                    mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+                <mat-form-field appearance="outline" [style.fontSize.px]=12 class="w-2/6 mt-4 ml-5">
+                    <mat-label style="font-family: Ubuntu;">Buscar Campaña</mat-label>
+                    <input style="font-family: Ubuntu;" matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="Campaña Id">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option style="font-family: Ubuntu;" [style.fontSize.px]=12 *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="text-black">
+            <h6 style="font-family: UbuntuMono;" class="font-semibold text-sm ml-10 mt-5">Campaña 01-35668</h6>
+            <mat-card class="m-5">
+                <h6 style="font-family: UbuntuMono;" class="font-semibold ml-5 text-xs text-gray-500">Tipo de reporte</h6>
+                <h6 style="font-family: UbuntuMono;" class="font-semibold ml-5 text-base text-black">Deudas</h6>
+                <canvas baseChart height="60" [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                    [plugins]="barChartPlugins" [legend]="barChartLegend" [colors]="barchartColors" [chartType]="barChartType">
+                </canvas>
+            </mat-card>
+            <div class="flex">
+                <div class="flex-1 w-3/6">
+                    <mat-card class="m-5">
+                        <h6 style="font-family: UbuntuMono;" class="font-semibold ml-5 text-xs text-gray-500">Tipo de reporte</h6>
+                        <h6 style="font-family: UbuntuMono;" class="font-semibold ml-5 text-base text-black">Tendencia últimos meses</h6>
+                        <canvas baseChart height="180" [datasets]="bar2ChartData" [labels]="bar2ChartLabels" [options]="barChartOptions"
+                            [plugins]="barChartPlugins" [colors]="bar2chartColors" [legend]="barChartLegend" [chartType]="barChartType">
+                        </canvas>
+                    </mat-card>
+                </div>
+                <div class="flex-1 w-3/6">
+                    <mat-card class="m-5">
+                        <h6 style="font-family: UbuntuMono;" class="font-semibold ml-5 text-xs text-gray-500">Tipo de reporte</h6>
+                        <h6 style="font-family: UbuntuMono;" class="font-semibold ml-5 text-base text-black">Estado de deudas</h6>
+                        <canvas baseChart height="180" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                            [options]="pieChartOptions" [colors]="piechartColors" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                        </canvas>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

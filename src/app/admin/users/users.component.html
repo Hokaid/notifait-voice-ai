@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenavcontainer inset-0 bg-white">
+    <mat-sidenav mode="side" class="w-16 bg-white text-black" opened>
+        <div class="text-center mt-20">
+            <button mat-icon-button class="side-button side-selected">
+                <mat-icon aria-hidden="false" class="side-icon">campaign</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">file_copy</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">signal_cellular_alt</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">settings</mat-icon>
+            </button>
+            <button mat-icon-button class="side-button">
+                <mat-icon aria-hidden="false" class="side-icon">laptop</mat-icon>
+            </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="topbar-container">
+            <div class="titulo-topbar">
+                <button mat-icon-button aria-label="back" class="boton-back">
+                    <mat-icon class="icon-back">keyboard_arrow_left</mat-icon>
+                </button>
+                <div style="font-family: Ubuntu;" class="font-bold titulo-label">Admin</div>
+            </div>
+            <div class="perfil-topbar">
+                <label class="perfil-label">Hola, Luis</label>
+                <img class="perfil-foto" src="../../../assets/img/perfil.png">
+            </div>
+        </mat-toolbar>
+        <div class="filtros-container bg-gray-100">
+            <div style="font-family: Ubuntu;" class="w-4/12 text-xs ml-8">Amet minim mollit non deserunt ullamco est sit
+                aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit
+                mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+            <div class="block mr-5">
+                <button mat-stroked-button color="primary" class="border border-red-600 bg-white text-black px-6 py-3 rounded-md"> 
+                    <mat-icon class="text-red-500 mr-2" aria-hidden="false" aria-label="Example home icon">add_circle</mat-icon> CREAR USUARIO
+                </button>
+            </div>
+        </div>
+        <div class="block h-full bg-gray-100">
+            <div class="flex justify-end">
+                <div class="bg-white rounded w-1/6 h-10">
+                    1
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
